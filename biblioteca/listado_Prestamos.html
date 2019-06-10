@@ -1,0 +1,22 @@
+<div class="tabla">
+    <table border="1" class="table  table-striped  table-dark">
+        <thead>
+            <tr>
+                <th class="text-center" scope="row">Libro</th>
+                <th class="text-center" scope="row">Usuario</th>
+                <th class="text-center" scope="row">Entrega</th>
+                <th class="text-center" scope="row">Devolución</th>
+                <th class="text-center" scope="row">Entregar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="p in prestamos">
+                <td class="text-center">{{p.libro}}</td>
+                <td class="text-center">{{p.usuario}} {{p.apellidos}}</td>
+                <td class="text-center">{{p.entrega|date:"fullDate"}}</td>
+                <td class="text-center">{{p.devolucion|date:"fullDate"}}</td>
+                <td class="text-center"><button class="btn btn-outline-secondary" ng-click="entregarLibro()">Entregar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

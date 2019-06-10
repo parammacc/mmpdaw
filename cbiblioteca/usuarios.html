@@ -1,0 +1,25 @@
+<h2>usuarios.html</h2>
+<div>
+    <a href="#!anadirUsuario">Añadir Usuario</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Detalles</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="u in usuarios">
+                <td>{{u.id}}</td>
+                <td>{{u.nombre}}</td> 
+            <!--    <td><a href="#!detallesUsuario">Detalles</a></td>   -->
+                <td><button ng-click="detallesUsuario()">Detalles</button></td>
+                <td><button ng-click="modificarUsuario()">Modificar</button></td>
+                <td><button ng-click="eliminarUsuario()">Borrar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

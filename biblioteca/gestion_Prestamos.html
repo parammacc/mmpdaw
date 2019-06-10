@@ -1,0 +1,15 @@
+<div class="panel">
+    <div id="agregar" class="mx-auto">
+        <h1 class="text-center text-success">Nuevo Prestamo</h1>
+        <hr>
+        <label class="text-center text-success">Selecciona el COD. del usuario:</label>
+        <select ng-model="nuevo.usuario" class="form-control">
+			<option  ng-repeat="u in usuarios">{{u.id}}</option>
+        </select><br>
+        <label class="text-center text-success">Selecciona el COD. del libro:</label>
+        <select ng-model="nuevo.libro" class="form-control">
+			<option  ng-repeat="l in libros">{{l.id}}</option>
+		</select><br>
+        <button class="btn btn-outline-primary btn-lg btn-block" ng-click="nuevoPrestamo()">Crear Prestamo</button>
+    </div>
+</div>

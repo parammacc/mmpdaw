@@ -1,0 +1,10 @@
+<div class="panel">
+    <div id="agregar" class="mx-auto">
+        <h1 class="text-center text-success">{{accion.texto}} Usuario</h1>
+        <hr>
+        <input class="form-control" aria-label="Large" type="text" ng-model="nuevo.nombre" placeholder="Nombre">
+        <input class="form-control" aria-label="Large" type="text" ng-model="nuevo.apellidos" placeholder="Apellidos">
+        <input class="form-control" aria-label="Large" type="date" ng-model="nuevo.fecha" placeholder="Nuevo fecha nac">
+        <button class="btn btn-outline-primary btn-lg btn-block" ng-click="nuevoUsuario()">{{accion.texto}}</button>
+    </div>
+</div>

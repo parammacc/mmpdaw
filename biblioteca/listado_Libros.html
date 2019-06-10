@@ -1,0 +1,22 @@
+<div class="tabla">
+    <table border="1" class="table  table-striped  table-dark">
+        <thead>
+            <tr>
+                <th class="text-center" scope="row">ID</th>
+                <th class="text-center" scope="row">Titulo</th>
+                <th class="text-center" scope="row">Autor</th>
+                <th class="text-center" scope="row">Genero</th>
+                <th class="text-center" scope="row">Ejemplares</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="l in libros | filter:busqueda">
+                <td class="text-center">{{l.id}}</td>
+                <td class="text-center">{{l.nombre}}</td>
+                <td class="text-center">{{l.autor}}</td>
+                <td class="text-center">{{l.genero}}</td>
+                <td class="text-center">{{l.ejemplares}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

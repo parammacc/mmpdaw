@@ -1,0 +1,26 @@
+<div class="tabla">
+    <table border="1" class="table  table-striped  table-dark">
+        <thead>
+            <tr>
+                <th class="text-center" scope="row">ID</th>
+                <th class="text-center" scope="row">Nombre</th>
+                <th class="text-center" scope="row">Apellidos</th>
+                <th class="text-center" scope="row">Fecha</th>
+                <th class="text-center" scope="row">Penalizacion</th>
+                <th class="text-center" scope="row">Modificar</th>
+                <th class="text-center" scope="row">Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="u in usuarios | filter:busqueda">
+                <td class="text-center">{{u.id}}</td>
+                <td class="text-center">{{u.nombre}}</td>
+                <td class="text-center">{{u.apellidos}}</td>
+                <td class="text-center">{{u.fecha|date:"fullDate"}}</td>
+                <td class="text-center">{{u.penalizacion}}</td>
+                <td class="text-center"><button class="btn btn-outline-warning" ng-click="modificarUsuario()">Modificar</button></td>
+                <td class="text-center"><button class="btn btn-outline-danger" ng-click="borrarUsuario()">Borrar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

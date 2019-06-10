@@ -1,0 +1,24 @@
+<h2>libros.html</h2>
+<div>
+    <a href="#!anadirLibro">Añadir Libro</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Detalles</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="l in libros">
+                <td>{{l.id}}</td>
+                <td>{{l.nombre}}</td>
+                <td><button ng-click="detallesLibro()">Detalles</button></td>
+                <td><button ng-click="modificarLibro()">Modificar</button></td>
+                <td><button ng-click="eliminarLibro()">Borrar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
